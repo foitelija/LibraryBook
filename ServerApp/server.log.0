@@ -1,0 +1,146 @@
+нояб. 19, 2021 3:15:00 PM com.app.service.impl.BookServiceImpl auth
+INFO: auth  user test
+нояб. 19, 2021 3:15:01 PM com.app.service.impl.BookServiceImpl auth
+INFO: error auth  user  test Пользователь не найден!
+нояб. 19, 2021 3:15:12 PM com.app.service.impl.BookServiceImpl auth
+INFO: auth  user test1
+нояб. 19, 2021 3:15:12 PM com.app.service.impl.BookServiceImpl auth
+INFO: succes auth  user  test1
+нояб. 19, 2021 3:15:13 PM com.app.service.impl.BookServiceImpl getAllGenre
+INFO: select all  genre  login test1 
+нояб. 19, 2021 3:15:13 PM com.app.service.impl.BookServiceImpl getAllAuthor
+INFO: get all author  login test1 
+нояб. 19, 2021 3:18:45 PM com.app.service.impl.BookServiceImpl createAuthor
+INFO: create author  Николай  Прокопчик login test1 
+нояб. 19, 2021 3:18:51 PM com.app.service.impl.BookServiceImpl getAllAuthor
+INFO: get all author  login test1 
+нояб. 19, 2021 3:18:51 PM com.app.service.impl.BookServiceImpl getAllBookByAuthor
+INFO: get all  book by author  login test1 
+нояб. 19, 2021 3:18:51 PM com.app.service.impl.BookServiceImpl getAllBookByAuthor
+INFO: Author{id=1, firstName='???????', lastName='?????????', visible=true, modifiedBy=User{login='modified_login', password='', firstName='???????', lastName='?????????', role=ADMIN}}
+нояб. 19, 2021 3:19:00 PM com.app.service.impl.BookServiceImpl updateAuthor
+INFO: update author  login test1 
+нояб. 19, 2021 3:19:00 PM com.app.service.impl.BookServiceImpl updateAuthor
+INFO: Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=null}
+нояб. 19, 2021 3:19:03 PM com.app.service.impl.BookServiceImpl getAllAuthor
+INFO: get all author  login test1 
+нояб. 19, 2021 3:19:03 PM com.app.service.impl.BookServiceImpl getAllBookByAuthor
+INFO: get all  book by author  login test1 
+нояб. 19, 2021 3:19:03 PM com.app.service.impl.BookServiceImpl getAllBookByAuthor
+INFO: Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=User{login='modified_login', password='', firstName='???????', lastName='?????????', role=ADMIN}}
+нояб. 19, 2021 3:19:25 PM com.app.service.impl.BookServiceImpl createGenre
+INFO: create genre  Жанр  login test1 
+нояб. 19, 2021 3:19:25 PM com.app.service.impl.BookServiceImpl createGenre
+INFO: genre  Жанр  id 1 
+нояб. 19, 2021 3:19:32 PM com.app.service.impl.BookServiceImpl updateGenre
+INFO: update genre login test1 
+нояб. 19, 2021 3:19:32 PM com.app.service.impl.BookServiceImpl updateGenre
+INFO: Genre{id=1, name='Comedy', visible=true, modifiedBy=null}
+нояб. 19, 2021 3:19:44 PM com.app.service.impl.BookServiceImpl createBook
+INFO: create book Java - the best    login test1 
+нояб. 19, 2021 3:19:44 PM com.app.service.impl.BookServiceImpl createBook
+INFO: Genre{id=1, name='Comedy', visible=true, modifiedBy=User{login='test1', password='', firstName='???????', lastName='?????????', role=ADMIN}}
+нояб. 19, 2021 3:19:44 PM com.app.service.impl.BookServiceImpl createBook
+INFO: Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=User{login='modified_login', password='', firstName='???????', lastName='?????????', role=ADMIN}}
+нояб. 19, 2021 3:19:45 PM com.app.service.impl.BookServiceImpl getAllBookByAuthor
+INFO: get all  book by author  login test1 
+нояб. 19, 2021 3:19:45 PM com.app.service.impl.BookServiceImpl getAllBookByAuthor
+INFO: Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=User{login='modified_login', password='', firstName='???????', lastName='?????????', role=ADMIN}}
+нояб. 19, 2021 3:20:37 PM com.app.service.impl.BookServiceImpl createArrival
+INFO: create arrival   login test1 
+нояб. 19, 2021 3:20:37 PM com.app.service.impl.BookServiceImpl createArrival
+INFO: Arrival{id=0, arrivalDate=2021-11-19, book=Book{id=1, name='Java - the best', author=Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=null}, genre=Genre{id=1, name='Comedy', visible=true, modifiedBy=null}, visible=true, modifiedBy=User{login='modified_login', password='', firstName='???????', lastName='?????????', role=ADMIN}}, yearOf=2021, price=10, amount=10, visible=true, pages=250, bookPublisher='Munich', modifiedBy=null}
+нояб. 19, 2021 3:26:13 PM com.app.service.impl.BookServiceImpl getGenreCount
+INFO: get report genre count login test1 
+нояб. 19, 2021 3:26:38 PM com.app.service.impl.BookServiceImpl getYearCount
+INFO: get report year count login test1 
+нояб. 19, 2021 3:33:50 PM com.app.service.impl.BookServiceImpl createGenre
+INFO: create genre  Drama  login test1 
+нояб. 19, 2021 3:33:50 PM com.app.service.impl.BookServiceImpl createGenre
+INFO: genre  Drama  id 2 
+нояб. 19, 2021 3:33:55 PM com.app.service.impl.BookServiceImpl createGenre
+INFO: create genre  Programming  login test1 
+нояб. 19, 2021 3:33:55 PM com.app.service.impl.BookServiceImpl createGenre
+INFO: genre  Programming  id 3 
+нояб. 19, 2021 3:34:07 PM com.app.service.impl.BookServiceImpl createBook
+INFO: create book C# or .Net    login test1 
+нояб. 19, 2021 3:34:07 PM com.app.service.impl.BookServiceImpl createBook
+INFO: Genre{id=3, name='Programming', visible=true, modifiedBy=User{login='test1', password='', firstName='???????', lastName='?????????', role=ADMIN}}
+нояб. 19, 2021 3:34:07 PM com.app.service.impl.BookServiceImpl createBook
+INFO: Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=User{login='modified_login', password='', firstName='???????', lastName='?????????', role=ADMIN}}
+нояб. 19, 2021 3:34:19 PM com.app.service.impl.BookServiceImpl createBook
+INFO: create book MFC    login test1 
+нояб. 19, 2021 3:34:19 PM com.app.service.impl.BookServiceImpl createBook
+INFO: Genre{id=3, name='Programming', visible=true, modifiedBy=User{login='test1', password='', firstName='???????', lastName='?????????', role=ADMIN}}
+нояб. 19, 2021 3:34:19 PM com.app.service.impl.BookServiceImpl createBook
+INFO: Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=User{login='modified_login', password='', firstName='???????', lastName='?????????', role=ADMIN}}
+нояб. 19, 2021 3:34:29 PM com.app.service.impl.BookServiceImpl createBook
+INFO: create book MITSO LIFE    login test1 
+нояб. 19, 2021 3:34:29 PM com.app.service.impl.BookServiceImpl createBook
+INFO: Genre{id=2, name='Drama', visible=true, modifiedBy=User{login='test1', password='', firstName='???????', lastName='?????????', role=ADMIN}}
+нояб. 19, 2021 3:34:29 PM com.app.service.impl.BookServiceImpl createBook
+INFO: Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=User{login='modified_login', password='', firstName='???????', lastName='?????????', role=ADMIN}}
+нояб. 19, 2021 3:35:05 PM com.app.service.impl.BookServiceImpl getGenreCount
+INFO: get report genre count login test1 
+нояб. 19, 2021 3:38:17 PM com.app.service.impl.BookServiceImpl createArrival
+INFO: create arrival   login test1 
+нояб. 19, 2021 3:38:17 PM com.app.service.impl.BookServiceImpl createArrival
+INFO: Arrival{id=0, arrivalDate=2021-11-18, book=Book{id=2, name='C# or .Net', author=Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=null}, genre=Genre{id=3, name='Programming', visible=true, modifiedBy=null}, visible=true, modifiedBy=User{login='modified_login', password='', firstName='???????', lastName='?????????', role=ADMIN}}, yearOf=2015, price=18, amount=2, visible=true, pages=111, bookPublisher='Foitelija', modifiedBy=null}
+нояб. 19, 2021 3:39:46 PM com.app.service.impl.BookServiceImpl createArrival
+INFO: create arrival   login test1 
+нояб. 19, 2021 3:39:46 PM com.app.service.impl.BookServiceImpl createArrival
+INFO: Arrival{id=0, arrivalDate=2021-11-17, book=Book{id=3, name='MFC', author=Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=null}, genre=Genre{id=3, name='Programming', visible=true, modifiedBy=null}, visible=true, modifiedBy=User{login='modified_login', password='', firstName='???????', lastName='?????????', role=ADMIN}}, yearOf=2018, price=1, amount=10, visible=true, pages=555, bookPublisher='Svintus', modifiedBy=null}
+нояб. 19, 2021 3:40:07 PM com.app.service.impl.BookServiceImpl createArrival
+INFO: create arrival   login test1 
+нояб. 19, 2021 3:40:07 PM com.app.service.impl.BookServiceImpl createArrival
+INFO: Arrival{id=0, arrivalDate=2021-11-18, book=Book{id=4, name='MITSO LIFE', author=Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=null}, genre=Genre{id=2, name='Drama', visible=true, modifiedBy=null}, visible=true, modifiedBy=User{login='modified_login', password='', firstName='???????', lastName='?????????', role=ADMIN}}, yearOf=2018, price=1, amount=1, visible=true, pages=228, bookPublisher='MITSO', modifiedBy=null}
+нояб. 19, 2021 3:40:09 PM com.app.service.impl.BookServiceImpl getYearCount
+INFO: get report year count login test1 
+нояб. 19, 2021 4:17:24 PM com.app.service.impl.BookServiceImpl getAllArrivalByPeriod
+INFO: get all arrival  by period  login test1 
+нояб. 19, 2021 4:17:24 PM com.app.service.impl.BookServiceImpl getAllArrivalByPeriod
+INFO: from 2021-11-12 to 2021-11-19
+нояб. 19, 2021 4:27:21 PM com.app.service.impl.BookServiceImpl saveUser
+INFO: create user  Nikolay Prokopchik, login test, role  ADMIN 
+нояб. 19, 2021 4:34:04 PM com.app.service.impl.BookServiceImpl auth
+INFO: auth  user test
+нояб. 19, 2021 4:34:04 PM com.app.service.impl.BookServiceImpl auth
+INFO: succes auth  user  test
+нояб. 19, 2021 4:34:06 PM com.app.service.impl.BookServiceImpl getAllGenre
+INFO: select all  genre  login test 
+нояб. 19, 2021 4:34:06 PM com.app.service.impl.BookServiceImpl getAllAuthor
+INFO: get all author  login test 
+нояб. 19, 2021 4:34:06 PM com.app.service.impl.BookServiceImpl getAllBookByAuthor
+INFO: get all  book by author  login test 
+нояб. 19, 2021 4:34:06 PM com.app.service.impl.BookServiceImpl getAllBookByAuthor
+INFO: Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=User{login='modified_login', password='', firstName='Nikolay', lastName='Prokopchik', role=ADMIN}}
+нояб. 19, 2021 4:34:06 PM com.app.service.impl.BookServiceImpl getAllBookByAuthor
+INFO: get all  book by author  login test 
+нояб. 19, 2021 4:34:06 PM com.app.service.impl.BookServiceImpl getAllBookByAuthor
+INFO: Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=User{login='modified_login', password='', firstName='Nikolay', lastName='Prokopchik', role=ADMIN}}
+нояб. 19, 2021 4:34:08 PM com.app.service.impl.BookServiceImpl getAllArrivalByPeriod
+INFO: get all arrival  by period  login test 
+нояб. 19, 2021 4:34:08 PM com.app.service.impl.BookServiceImpl getAllArrivalByPeriod
+INFO: from 2021-11-12 to 2021-11-19
+нояб. 19, 2021 5:18:19 PM com.app.service.impl.BookServiceImpl getAllBookByAuthor
+INFO: get all  book by author  login test 
+нояб. 19, 2021 5:18:19 PM com.app.service.impl.BookServiceImpl getAllBookByAuthor
+INFO: Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=User{login='modified_login', password='', firstName='Nikolay', lastName='Prokopchik', role=ADMIN}}
+нояб. 19, 2021 5:18:29 PM com.app.service.impl.BookServiceImpl createBook
+INFO: create book VB.net    login test 
+нояб. 19, 2021 5:18:29 PM com.app.service.impl.BookServiceImpl createBook
+INFO: Genre{id=3, name='Programming', visible=true, modifiedBy=User{login='test1', password='', firstName='Nikolay', lastName='Prokopchik', role=ADMIN}}
+нояб. 19, 2021 5:18:29 PM com.app.service.impl.BookServiceImpl createBook
+INFO: Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=User{login='modified_login', password='', firstName='Nikolay', lastName='Prokopchik', role=ADMIN}}
+нояб. 19, 2021 5:18:31 PM com.app.service.impl.BookServiceImpl getAllArrivalByPeriod
+INFO: get all arrival  by period  login test 
+нояб. 19, 2021 5:18:31 PM com.app.service.impl.BookServiceImpl getAllArrivalByPeriod
+INFO: from 2021-11-12 to 2021-11-19
+нояб. 19, 2021 5:20:08 PM com.app.service.impl.BookServiceImpl createArrival
+INFO: create arrival   login test 
+нояб. 19, 2021 5:20:08 PM com.app.service.impl.BookServiceImpl createArrival
+INFO: Arrival{id=0, arrivalDate=2021-11-19, book=Book{id=5, name='VB.net', author=Author{id=1, firstName='Nikolay', lastName='Prokopchik', visible=true, modifiedBy=null}, genre=Genre{id=3, name='Programming', visible=true, modifiedBy=null}, visible=true, modifiedBy=User{login='modified_login', password='', firstName='Nikolay', lastName='Prokopchik', role=ADMIN}}, yearOf=2021, price=5, amount=2, visible=true, pages=250, bookPublisher='World', modifiedBy=null}
+нояб. 19, 2021 5:24:51 PM com.app.service.impl.BookServiceImpl getGenreCount
+INFO: get report genre count login test 
+нояб. 19, 2021 5:42:45 PM com.app.service.impl.BookServiceImpl getYearCount
+INFO: get report year count login test 

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="539.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controller.MainController">
+   <center>
+      <TabPane>
+         <tabs>
+            <Tab text="Поступления">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="797.0">
+                     <left>
+                        <VBox prefHeight="500.0" prefWidth="339.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <GridPane hgap="5.0" vgap="5.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.0" minWidth="10.0" prefWidth="133.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="181.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Начало периода" />
+                                    <Label text="Конец периода" GridPane.rowIndex="1" />
+                                    <DatePicker fx:id="fromDate" GridPane.columnIndex="1" />
+                                    <DatePicker fx:id="toDate" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                                <buttons>
+                                  <Button mnemonicParsing="false" onAction="#updatePeriod" text="Применить" />
+                                    <Button mnemonicParsing="false" onAction="#reportArrival" text="Создать отчет" />
+                                </buttons>
+                              </ButtonBar>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </left>
+                     <center>
+                        <TableView fx:id="tabArrival" prefHeight="200.0" prefWidth="569.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </content></Tab>
+             <Tab closable="false" text="Справочник">
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Жанры">
+                           <content>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                 <center>
+                                    <TableView fx:id="tabGenre" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                           </content>
+                      </Tab>
+                      <Tab text="Авторы">
+                        <content>
+                            <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                <center>
+                                    <TableView fx:id="tabAuthor" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                </center>
+                            </BorderPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Книги">
+                           <content>
+                               <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                   <center>
+                                       <TableView fx:id="tabBook" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                   </center>
+                                 <left>
+                                    <VBox prefHeight="461.0" prefWidth="383.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <GridPane hgap="10.0" vgap="10.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Автор" />
+                                                <ComboBox fx:id="authorFilter" prefHeight="31.0" prefWidth="393.0" GridPane.rowIndex="1" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                          <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                                            <buttons>
+                                                <Button mnemonicParsing="false" onAction="#reportBook" text="Сохранить в файл" />
+                                              <Button mnemonicParsing="false" onAction="#applyAuthorFilter" text="Применить" />
+                                            </buttons>
+                                             <VBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </VBox.margin>
+                                          </ButtonBar>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </VBox>
+                                 </left>
+                               </BorderPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+             </Tab>
+            <Tab text="Какой жанр книг преобладает">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="797.0">
+                     <center>
+                        <PieChart fx:id="pieChart" BorderPane.alignment="CENTER" />
+                     </center>
+                     <top>
+                        <FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER_LEFT">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#buildChart" text="Построить диаграмму">
+                                 <FlowPane.margin>
+                                    <Insets left="10.0" />
+                                 </FlowPane.margin>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets left="10.0" />
+                           </opaqueInsets>
+                        </FlowPane>
+                     </top>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab text="Каких книг по году больше">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="797.0">
+                     <top>
+                        <FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER_LEFT">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#buildBar" text="Построить ">
+                                 <FlowPane.margin>
+                                    <Insets left="10.0" />
+                                 </FlowPane.margin>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets left="10.0" />
+                           </opaqueInsets>
+                        </FlowPane>
+                     </top>
+                     <center>
+                        <BarChart fx:id="barChart" title="Топ поступлений книг по году публикации" BorderPane.alignment="CENTER">
+                            <xAxis>
+                                <CategoryAxis fx:id="osaX" side="BOTTOM" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis fx:id="osaY" side="LEFT" />
+                            </yAxis>
+                        </BarChart>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
